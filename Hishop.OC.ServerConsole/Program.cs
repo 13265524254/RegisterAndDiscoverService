@@ -14,7 +14,7 @@ namespace Hishop.OC.ServerConsole
             try
             {
                 var server = new ThriftSServer();
-                server.Start(false,18380);
+                server.Start(false, int.Parse(System.Configuration.ConfigurationManager.AppSettings["RegServerPort"]));
                 Console.WriteLine("{0}注册机服务已经启动",DateTime.Now);
                 Console.ReadLine();
 

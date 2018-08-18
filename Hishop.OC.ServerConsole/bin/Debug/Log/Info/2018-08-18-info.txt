@@ -1,0 +1,27 @@
+记录时间：2018/8/18 23:28:12
+日志级别：  INFO 
+错误描述：127.0.0.1_test_HiShop.OC.BasicService.Contract.IConfigCheck服务注册成功
+
+
+
+
+
+
+记录时间：2018/8/18 23:28:13
+日志级别：  INFO 
+错误描述：127.0.0.1_test_HiShop.OC.BasicService.Contract.IRegionService服务注册成功
+
+
+
+
+
+
+记录时间：2018/8/18 23:28:13
+日志级别：  INFO 
+错误描述：127.0.0.1_test_HiShop.OC.BasicService.Contract.IWechatService服务注册成功
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+记录时间：2018/8/18 23:42:15
+日志级别：  ERROR 
+错误描述：InitializationServiceData:System.TypeInitializationException: “HiShop.OC.Strategy.Cache.Cache”的类型初始值设定项引发异常。 ---> HiShop.OC.Core.InstanceCreateException: 服务实例创建异常 ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s); to create a disconnected multiplexer, disable AbortOnConnectFail. SocketFailure on PING
+   在 StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(Func`1 multiplexerFactory, TextWriter log)
+   在 StackExchange.Redis.ConnectionMultiplexer.Connect(ConfigurationOptions configuration, TextWriter log)
+   在 HiShop.OC.Strategy.Cache.Redis..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Reflection.Assembly.CreateInstance(String typeName, Boolean ignoreCase, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 HiShop.OC.Core.StrategyFactory.GetStrategyFromConfig[T]()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 HiShop.OC.Core.StrategyFactory.GetStrategyFromConfig[T]()
+   在 HiShop.OC.Strategy.Cache.Cache.Load()
+   在 HiShop.OC.Strategy.Cache.Cache..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 HiShop.OC.Strategy.Cache.Cache.Exists(String key)
+   在 Hishop.OC.RegService.RegAndDiscoverService.InitializationServiceData() 位置 E:\GitHub\RegisterAndDiscoverService\Hishop.OC.RegService\RegAndDiscoverService.cs:行号 36
+
+
+
+
+
+

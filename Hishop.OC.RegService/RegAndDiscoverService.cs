@@ -31,11 +31,21 @@ namespace Hishop.OC.RegService
         /// </summary>
         private static void InitializationServiceData()
         {
-            if (Cache.Exists(key))
-                dicService = Cache.Get<Dictionary<string, ServiceData>>(key);
-            else
-                dicService = new Dictionary<string, ServiceData>();
-            Log.Debug("共加载服务项" + dicService.Keys.Count);
+            try
+            {
+                if (Cache.Exists(key))
+                    dicService = Cache.Get<Dictionary<string, ServiceData>>(key);
+                else
+                    dicService = new Dictionary<string, ServiceData>();
+                Log.Debug("共加载服务项" + dicService.Keys.Count);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("InitializationServiceData:"+ex);
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            
             //    FileStream fs = null;
             //    try
             //    {

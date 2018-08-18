@@ -1,0 +1,36 @@
+记录时间：2018/8/18 23:28:08
+日志级别：  DEBUG 
+错误描述：共加载服务项0
+
+
+
+
+
+
+记录时间：2018/8/18 23:28:12
+日志级别：  DEBUG 
+错误描述：RegThriftSService127.0.0.1_test_HiShop.OC.BasicService.Contract.IConfigCheck
+
+
+
+
+
+
+记录时间：2018/8/18 23:28:13
+日志级别：  DEBUG 
+错误描述：RegThriftSService127.0.0.1_test_HiShop.OC.BasicService.Contract.IRegionService
+
+
+
+
+
+
+记录时间：2018/8/18 23:28:13
+日志级别：  DEBUG 
+错误描述：RegThriftSService127.0.0.1_test_HiShop.OC.BasicService.Contract.IWechatService
+
+
+
+
+
+

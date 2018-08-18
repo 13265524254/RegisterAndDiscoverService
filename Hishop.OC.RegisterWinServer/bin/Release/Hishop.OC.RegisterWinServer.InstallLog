@@ -1,0 +1,13 @@
+﻿正在安装程序集“E:\GitHub\RegisterAndDiscoverService\Hishop.OC.RegisterWinServer\bin\Release\Hishop.OC.RegisterWinServer.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = E:\GitHub\RegisterAndDiscoverService\Hishop.OC.RegisterWinServer\bin\Release\Hishop.OC.RegisterWinServer.exe
+   logfile = E:\GitHub\RegisterAndDiscoverService\Hishop.OC.RegisterWinServer\bin\Release\Hishop.OC.RegisterWinServer.InstallLog
+正在安装服务 HiShop.OC.RegisterAndDiscover...
+已成功安装服务 HiShop.OC.RegisterAndDiscover。
+正在日志 Application 中创建 EventLog 源 HiShop.OC.RegisterAndDiscover...
+正在提交程序集“E:\GitHub\RegisterAndDiscoverService\Hishop.OC.RegisterWinServer\bin\Release\Hishop.OC.RegisterWinServer.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = E:\GitHub\RegisterAndDiscoverService\Hishop.OC.RegisterWinServer\bin\Release\Hishop.OC.RegisterWinServer.exe
+   logfile = E:\GitHub\RegisterAndDiscoverService\Hishop.OC.RegisterWinServer\bin\Release\Hishop.OC.RegisterWinServer.InstallLog
