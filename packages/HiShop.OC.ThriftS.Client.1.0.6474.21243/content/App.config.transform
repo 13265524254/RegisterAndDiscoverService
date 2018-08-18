@@ -1,0 +1,13 @@
+﻿<configuration>
+  <appSettings>
+     <!--服务注册机器IP-->
+    <add key="RegServerIp" value="oc.hishop.com" /> 
+	
+    <!--服务注册机器端口-->
+    <add key="RegServerPort" value="18301" />
+	
+	<!-- 服务检测间隔时间(毫秒) -->
+	<add key="CheckInterval" value="500"/>
+  </appSettings>
+  
+</configuration>

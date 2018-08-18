@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HiShop.OC.ThriftS.Common</name>
+    </assembly>
+    <members>
+        <member name="P:ThriftS.IDL.ThriftSParameter.Compression">
+            <summary>
+            
+            <seealso cref="T:ThriftS.IDL.ThriftSCompression"/>
+            </summary>
+        </member>
+        <member name="T:ThriftS.IDL.ThriftSRequest">
+            <summary>
+            ThriftS请求
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyRequestId">
+            <summary>
+            KeyRequestId
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyRequestUri">
+            <summary>
+            KeyRequestUri
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyTrackerId">
+            <summary>
+            KeyTrackerId
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyVersion">
+            <summary>
+            KeyVersion
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyClientIP">
+            <summary>
+            ClientIP
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyClientHostName">
+            <summary>
+            ClientHostName
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyClientPid">
+            <summary>
+            ClientPID
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyClientRuntime">
+            <summary>
+            Client Runtime(jre or .net)
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSRequest.keyAccept">
+            <summary>
+            Accept
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.RequestId">
+            <summary>
+            请求Id
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.Uri">
+            <summary>
+            请求资源路径
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.TrackerId">
+            <summary>
+            跟踪Id, 用于串联服务调用栈
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.Version">
+            <summary>
+            组件版本
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.ClientIP">
+            <summary>
+            客户端IP地址
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.ClientHostName">
+            <summary>
+            客户端主机名
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.ClientPid">
+            <summary>
+            客户端进程号
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.ClientRuntime">
+            <summary>
+            客户端运行时(Java JRE或者.NET CLR版本)
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSRequest.Accept">
+            <summary>
+            接受的ContentType
+            </summary>
+        </member>
+        <member name="T:ThriftS.IDL.ThriftSResponse">
+            <summary>
+            ThriftS响应
+            </summary>
+        </member>
+        <member name="F:ThriftS.IDL.ThriftSResponse.keyVersion">
+            <summary>
+            KeyVersion
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSResponse.Version">
+            <summary>
+            组件版本
+            </summary>
+        </member>
+        <member name="P:ThriftS.IDL.ThriftSResult.Compression">
+            <summary>
+            
+            <seealso cref="T:ThriftS.IDL.ThriftSCompression"/>
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.ThriftS.Common.ContentTypes">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ContentTypes.Unknown">
+            <summary>
+            unknown
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ContentTypes.Thrift">
+            <summary>
+            thrift
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ContentTypes.Protobuf">
+            <summary>
+            protobuf
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ContentTypes.Json">
+            <summary>
+            json
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ContentTypes.Avro">
+            <summary>
+            avro
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ContentTypes.Binary">
+            <summary>
+            binary
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ContentTypes.Text">
+            <summary>
+            text
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.IRegisterService.RegisterService(System.String,System.Int32)">
+            <summary>
+            注册服务(Release模式)
+            </summary>
+            <param name="name">服务名称</param>
+            <param name="port">提供服务的端口</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.IRegisterService.RegisterDebugService(System.String,System.Int32)">
+            <summary>
+            Debug模式下注册服务（服务名带IP前缀）
+            </summary>
+            <param name="name">服务名称</param>
+            <param name="port">提供服务的端口</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.IRegisterService.RegisterServiceWithIP(System.String,System.String,System.Int32)">
+            <summary>
+            注册服务
+            </summary>
+            <param name="name">服务名称</param>
+            <param name="ip">服务节点IP</param>
+            <param name="port">服务端口</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.IRegisterService.DiscoverService(System.String)">
+            <summary>
+            通过服务名称来发现服务
+            </summary>
+            <param name="name">服务名称</param>
+            <returns>服务节点信息</returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.IRegisterService.DiscoverDebugService(System.String)">
+            <summary>
+            通过服务名称来发现Debug服务(若Deub下无此服务，则查找Release服务(不带IP))
+            </summary>
+            <param name="name">服务名称</param>
+            <returns>服务节点信息</returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.IRegisterService.UpdateService(System.Collections.Generic.List{System.String})">
+            <summary>
+            服务更新检查
+            </summary>
+            <param name="names"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.IRegisterService.UpdateDebugService(System.Collections.Generic.List{System.String})">
+            <summary>
+            debug模式下更新服务节点
+            </summary>
+            <param name="names"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ServiceData.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.ThriftS.Common.Utils">
+            <summary>
+            静态辅助方法
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.Utils.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.Utils.GetServiceName(System.Type)">
+            <summary>
+            获取服务名称
+            </summary>
+            <param name="contractType">类型</param>
+            <returns>服务名</returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.Utils.GetMethodName(System.Reflection.MethodInfo)">
+            <summary>
+            获取方法名称
+            </summary>
+            <param name="method">Method</param>
+            <returns>方法名</returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.Utils.GetSerializerMode(System.Type)">
+            <summary>
+            获取类型序列化方式
+            </summary>
+            <param name="targetType">类型</param>
+            <returns>SerializerMode</returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.Utils.GzipCompress(System.Byte[])">
+            <summary>
+            Gzip压缩
+            </summary>
+            <param name="buffer">buffer</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.Utils.GzipUnCompress(System.Byte[])">
+            <summary>
+            Gzip解压
+            </summary>
+            <param name="buffer">buffer</param>
+            <returns>结果</returns>
+        </member>
+        <member name="T:HiShop.OC.ThriftS.Common.SerializerMode">
+            <summary>
+            序列化方式
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.ThriftS.Common.SerializerMode.Thrift">
+            <summary>
+            Thrift序列化
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.ThriftS.Common.SerializerMode.ProtoBuf">
+            <summary>
+            ProtoBuf序列化
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.ThriftS.Common.SerializerMode.Json">
+            <summary>
+            Json序列化
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.ThriftS.Common.Attributes.ThriftSContractAttribute">
+            <summary>
+            ThriftS契约
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.Attributes.ThriftSContractAttribute.ServiceName">
+            <summary>
+            契约名称
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.Attributes.ThriftSContractAttribute.Version">
+            <summary>
+            契约版本
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.ThriftS.Common.Attributes.ThriftSMemberAttribute">
+            <summary>
+            ThriftS Member
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.Attributes.ThriftSMemberAttribute.#ctor(System.Int16)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="tag">unique identify</param>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.Attributes.ThriftSMemberAttribute.Tag">
+            <summary>
+            Gets the unique tag used to identify this member within the type.
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.ThriftS.Common.Attributes.ThriftSModelAttribute">
+            <summary>
+            ThriftS Model
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.Attributes.ThriftSModelAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.Attributes.ThriftSModelAttribute.#ctor(HiShop.OC.ThriftS.Common.SerializerMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="mode">序列化方式</param>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.Attributes.ThriftSModelAttribute.SerializerMode">
+            <summary>
+            序列化方式
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.ThriftS.Common.Attributes.ThriftSOperationAttribute">
+            <summary>
+            ThriftS方法
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.Attributes.ThriftSOperationAttribute.Name">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.Attributes.ThriftSOperationAttribute.IsOneWay">
+            <summary>
+            是否异步方法
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.Attributes.ThriftSOperationAttribute.Description">
+            <summary>
+            描述信息，为监控日志提供接口说明
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.ThriftS.Common.ThriftSException">
+            <summary>
+            ThriftS异常
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.ThriftSException.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">异常信息</param>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.ThriftSException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">异常信息</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.ThriftSException.#ctor(System.String,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">异常信息</param>
+            <param name="description">异常描述</param>
+        </member>
+        <member name="P:HiShop.OC.ThriftS.Common.ThriftSException.Description">
+            <summary>
+            异常描述
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.ThriftS.Common.ThriftSException.ToString">
+            <summary>
+            字符串描述
+            </summary>
+            <returns>描述信息</returns>
+        </member>
+    </members>
+</doc>

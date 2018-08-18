@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HiShop.OC.Strategy.Cache.Redis</name>
+    </assembly>
+    <members>
+        <member name="P:HiShop.OC.Strategy.Cache.Redis.TimeOut">
+            <summary>
+            连接超时设置
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Strategy.Cache.Redis.Exists(System.String)">
+            <summary>
+            判断key是否存在
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Strategy.Cache.Redis.Send(System.String,System.Object)">
+            <summary>
+            缓存队列发送信息
+            </summary>
+            <param name="key"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:HiShop.OC.Strategy.Cache.Redis.RegisterSubscribe``1(System.String,HiShop.OC.Strategy.Cache.Cache.DoSub)">
+            <summary>
+            注册订阅方法 
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Strategy.Cache.Redis.UnRegisterSubscrib(System.String)">
+            <summary>
+            注销订阅方法
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Strategy.Cache.Redis.Recieve``1(System.String)">
+            <summary>
+            接收数据
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Strategy.Cache.Redis.GetCacheLocker(System.String)">
+            <summary>
+            获取缓存锁（当使用分布式缓存时，具有分布式锁特性）
+            使用时，请务必释放返回的Locker对象，否则会造成对应
+            缓存持续阻塞
+            </summary>
+            <param name="key">缓存键</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

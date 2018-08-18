@@ -1,0 +1,17 @@
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\Hishop.OC.RegService.dll
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\Hishop.OC.RegService.pdb
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\Hishop.OC.ThriftS.Common.dll
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\Hishop.OC.ThriftS.Service.dll
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\Newtonsoft.Json.dll
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\Thrift.dll
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\HiShop.OC.ThriftS.Client.dll
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\HiShop.OC.ThriftS.Serializer.dll
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\Newtonsoft.Json.xml
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\obj\Debug\Hishop.OC.RegService.dll
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\obj\Debug\Hishop.OC.RegService.pdb
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\Hishop.OC.RegService.dll.config
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\HiShop.OC.ThriftS.Client.xml
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\HiShop.OC.ThriftS.Common.xml
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\HiShop.OC.ThriftS.Serializer.xml
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\bin\Debug\HiShop.OC.ThriftS.Service.xml
+C:\SVN\HiShop.OmniChannel\trunk\HiShop.OmniChannel.Common\RPC\Hishop.OC.RegisterAndDiscoverService\Hishop.OC.RegService\obj\Debug\Hishop.OC.RegService.csprojResolveAssemblyReference.cache

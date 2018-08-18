@@ -1,0 +1,9 @@
+<configuration>
+  <appSettings>
+     <!-- 服务注册服务器的IP-->
+    <add key="RegServerIp" value="oc.hishop.com"/>
+	<!-- 服务注册服务器的端口 -->
+    <add key="RegServerPort" value="18301"/>
+	<add key="CompanyKey" value="" />
+  </appSettings>
+</configuration>
