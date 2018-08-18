@@ -1,8 +1,0 @@
-﻿<configuration>
-  <appSettings>
-    <!--日志实现类型Local或者OSS-->
-    <add key="LogType" value="Local"/>
-    <!--日志来源-->
-    <add key="LogSource" value=""/>
-  </appSettings>
-</configuration>
