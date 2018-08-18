@@ -1,0 +1,1818 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HiShop.OC.Core</name>
+    </assembly>
+    <members>
+        <member name="T:HiShop.OC.Core.InstanceCreateException">
+            <summary>
+            实例创建异常
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.PluginConfigException.#ctor(System.String)">
+            <summary>
+            插件配置异常
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.ConvertDateTimeInt(System.DateTime)">
+            <summary>
+            DateTime时间格式转换为Unix时间戳格式
+            </summary>
+            <param name="time"> DateTime时间格式</param>
+            <returns>Unix时间戳格式</returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.GetTime(System.String)">
+            <summary>
+            时间戳转为C#格式时间
+            </summary>
+            <param name="timeStamp">Unix时间戳格式</param>
+            <returns>C#格式时间</returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.CheckTimeStamp(System.String)">
+            <summary>
+            时间戳验证
+            </summary>
+            <param name="timestamp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.SortedData(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            数据排序
+            </summary>
+            <param name="dic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.Parameterfilter(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            参数过滤 sign  sign_type
+            </summary>
+            <param name="dic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.Data2Linkstring(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            生成待签名数据字符
+            </summary>
+            <param name="dic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.GetSign(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String)">
+            <summary>
+            获取签名
+            </summary>
+            <param name="dic"></param>
+            <param name="appSecret"></param>
+            <param name="sign_type"></param>
+            <param name="_input_charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.BuildSign(System.String,System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="prestr"></param>
+            <param name="sign_type"></param>
+            <param name="_input_charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.Data2URIAndSign(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String)">
+            <summary>
+            生成带签名的链接
+            </summary>
+            <param name="dic"></param>
+            <param name="appSecret"></param>
+            <param name="sign_type"></param>
+            <param name="_input_charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ApiSignHelper.CheckSign(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String)">
+            <summary>
+            签名验证
+            </summary>
+            <param name="dic"></param>
+            <param name="appSecret"></param>
+            <param name="sign_type"></param>
+            <param name="_input_charset"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HiShop.OC.Core.CallContextHelper">
+            <summary>
+            调用域上下文帮助类
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CallContextHelper.Add(System.String,System.Object)">
+            <summary>
+            向CallContext中按指定的键保存对象
+            </summary>
+            <param name="key"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.CallContextHelper.Get(System.String)">
+            <summary>
+            从CallContext中按指定的键获取对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CallContextHelper.Clear">
+            <summary>
+            清空当前CallContext中保存的对象
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.Core.CommonHelper">
+            <summary>
+            普通帮助类
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetDateTimeMS">
+            <summary>
+            获得当前时间的""yyyy-MM-dd HH:mm:ss:fffffff""格式字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetDateTimeU">
+            <summary>
+            获得当前时间的""yyyy年MM月dd日 HH:mm:ss""格式字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetDateTime">
+            <summary>
+            获得当前时间的""yyyy-MM-dd HH:mm:ss""格式字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetDate">
+            <summary>
+            获得当前日期
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetChineseDate">
+            <summary>
+            获得中文当前日期
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetTime">
+            <summary>
+            获得当前时间(不含日期部分)
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetHour">
+            <summary>
+            获得当前小时
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetDay">
+            <summary>
+            获得当前天
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetMonth">
+            <summary>
+            获得当前月
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetYear">
+            <summary>
+            获得当前年
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetDayOfWeek">
+            <summary>
+            获得当前星期(数字)
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetWeek">
+            <summary>
+            获得当前星期(汉字)
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetIndexInArray(System.String,System.String[],System.Boolean)">
+            <summary>
+            获得字符串在字符串数组中的位置
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetIndexInArray(System.String,System.String[])">
+            <summary>
+            获得字符串在字符串数组中的位置
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.IsInArray(System.String,System.String[],System.Boolean)">
+            <summary>
+            判断字符串是否在字符串数组中
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.IsInArray(System.String,System.String[])">
+            <summary>
+            判断字符串是否在字符串数组中
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.IsInArray(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            判断字符串是否在字符串中
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.IsInArray(System.String,System.String,System.String)">
+            <summary>
+            判断字符串是否在字符串中
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.IsInArray(System.String,System.String)">
+            <summary>
+            判断字符串是否在字符串中
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.ObjectArrayToString(System.Object[],System.String)">
+            <summary>
+            将对象数组拼接成字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.ObjectArrayToString(System.Object[])">
+            <summary>
+            将对象数组拼接成字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.StringArrayToString(System.String[],System.String)">
+            <summary>
+            将字符串数组拼接成字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.StringArrayToString(System.String[])">
+            <summary>
+            将字符串数组拼接成字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.IntArrayToString(System.Int32[],System.String)">
+            <summary>
+            将整数数组拼接成字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.IntArrayToString(System.Int32[])">
+            <summary>
+            将整数数组拼接成字符串
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.RemoveArrayItem(System.String[],System.String,System.Boolean,System.Boolean)">
+            <summary>
+            移除数组中的指定项
+            </summary>
+            <param name="array">源数组</param>
+            <param name="removeItem">要移除的项</param>
+            <param name="removeBackspace">是否移除空格</param>
+            <param name="ignoreCase">是否忽略大小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.RemoveArrayItem(System.String[])">
+            <summary>
+            移除数组中的指定项
+            </summary>
+            <param name="array">源数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.RemoveStringItem(System.String,System.String)">
+            <summary>
+            移除字符串中的指定项
+            </summary>
+            <param name="s">源字符串</param>
+            <param name="splitStr">分割字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.RemoveStringItem(System.String)">
+            <summary>
+            移除字符串中的指定项
+            </summary>
+            <param name="s">源字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.RemoveRepeaterItem(System.Int32[])">
+            <summary>
+            移除数组中的重复项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.RemoveRepeaterItem(System.String[])">
+            <summary>
+            移除数组中的重复项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetUniqueString(System.String)">
+            <summary>
+            去除字符串中的重复元素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetUniqueString(System.String,System.String)">
+            <summary>
+            去除字符串中的重复元素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.TBBRTrim(System.String)">
+            <summary>
+            去除字符串首尾处的空格、回车、换行符、制表符
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.ClearTBBR(System.String)">
+            <summary>
+            去除字符串中的空格、回车、换行符、制表符
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.DeleteNullOrSpaceRow(System.String)">
+            <summary>
+            删除字符串中的空行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetHtmlBS(System.Int32)">
+            <summary>
+            获得指定数量的html空格
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetHtmlSpan(System.Int32)">
+            <summary>
+            获得指定数量的htmlSpan元素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.SubDecimal(System.Decimal,System.Int32)">
+            <summary>
+            截取小数
+            </summary>
+            <param name="dec">小数值</param>
+            <param name="pointCount">保留小数点数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.GetEmailProvider(System.String)">
+             <summary>
+            获得邮箱提供者
+             </summary>
+             <param name="email">邮箱</param>
+             <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.EscapeRegex(System.String)">
+            <summary>
+            转义正则表达式
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.ConvertIPToInt64(System.String)">
+            <summary>
+            将ip地址转换成Int64类型
+            </summary>
+            <param name="ip">ip</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.HideEmail(System.String)">
+            <summary>
+            隐藏邮箱
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.CommonHelper.HideMobile(System.String)">
+            <summary>
+            隐藏手机
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.EnumHelper.ToDescription(System.Enum)">
+            <summary>
+            根据枚举类型和枚举值获取枚举描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.EnumHelper.ToDescriptionDictionary``1">
+            <summary>
+            转化枚举及其描述为字典类型
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="enumObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.EnumHelper.ToDictionary``1">
+            <summary>
+            转化枚举及其Text值转为字典类型
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <param name="enumObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.EnumHelper.GetEnumDic(System.Type)">
+            <summary>
+             返回 Dic&lt;枚举项，描述&gt;
+            </summary>
+            <param name="enumType">枚举的类型</param>
+            <returns>Dic&lt;枚举项，描述&gt;</returns>
+        </member>
+        <member name="M:HiShop.OC.Core.EnumHelper.GetDescription(System.Type,System.String)">
+            <summary>
+            根据枚举类型和枚举值获取枚举描述
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <param name="enumText">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Helper.GeographyHelper.GetLatLngDistance(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            计算2个坐标点的距离（单位米）
+            </summary>
+            <param name="fromLat"></param>
+            <param name="fromLng"></param>
+            <param name="toLat"></param>
+            <param name="toLng"></param>
+            <returns>距离米</returns>
+        </member>
+        <member name="M:HiShop.OC.Core.HttpHelper.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            验证证书
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ImageHelper.GetJPEGCodec">
+            <summary>
+            获得当前系统安装的JPEG编码解码器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ImageHelper.CreateThumbnail(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            为指定的图片生成缩略图
+            </summary>
+            <param name="sourceFilename">图片源文件的完整文件名</param>
+            <param name="destFilename">缩略图文件的完整文件名</param>
+            <param name="width">缩略图宽度(px)</param>
+            <param name="height">缩略图高度(px)</param>
+        </member>
+        <member name="M:HiShop.OC.Core.ImageHelper.GenerateImageWatermark(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            生成图片水印
+            </summary>
+            <param name="originalPath">源图路径</param>
+            <param name="watermarkPath">水印图片路径</param>
+            <param name="targetPath">保存路径</param>
+            <param name="position">位置</param>
+            <param name="opacity">透明度</param>
+            <param name="quality">质量</param>
+        </member>
+        <member name="M:HiShop.OC.Core.ImageHelper.GenerateTextWatermark(System.String,System.String,System.String,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            生成文字水印
+            </summary>
+            <param name="originalPath">源图路径</param>
+            <param name="targetPath">保存路径</param>
+            <param name="text">水印文字</param>
+            <param name="textSize">文字大小</param>
+            <param name="textFont">文字字体</param>
+            <param name="position">位置</param>
+            <param name="quality">质量</param>
+        </member>
+        <member name="M:HiShop.OC.Core.ImageHelper.GenerateCheckCode(System.String@)">
+            <summary>
+            生成验证码
+            </summary>
+            <param name="checkCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ImageHelper.TranserImageFormat(System.String,System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            图片格式转换
+            </summary>
+            <param name="originalImagePath">原始图片地址</param>
+            <param name="newFormatImagePath">新格式图片地址</param>
+            <param name="fortmat">待转换的格式</param>
+        </member>
+        <member name="M:HiShop.OC.Core.IOHelper.GetMapPath(System.String)">
+            <summary>
+            获取当前目录
+            （网站为网站根目录，测试时为dll所在目录）
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.IOHelper.CopyFile(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            复制指定的文件到指定目录
+            </summary>
+            <param name="fileFullPath">源文件的全路径</param>
+            <param name="destination">目标目录</param>
+            <param name="isDeleteSourceFile">是否删除源文件</param>
+            <param name="fileName">目标文件名称,默认是原名称</param>
+            <exception cref="T:System.ArgumentNullException">源文件全路径为空</exception>
+            <exception cref="T:System.IO.FileNotFoundException">找不到源文件</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">找不到目标目录</exception>
+            <exception cref="T:System.Exception">复制文件异常</exception>
+        </member>
+        <member name="M:HiShop.OC.Core.IOHelper.GetDirectoryLength(System.String)">
+            <summary>
+            获取文件夹大小单位KB
+            </summary>
+            <param name="dirPath">文件夹路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.IOHelper.urlToVirtual(System.String)">
+            <summary>
+            将物理路径转换成相对路径
+            </summary>
+            <param name="url">物理路径名称</param>
+            <returns>返回绝对路径</returns>
+        </member>
+        <member name="M:HiShop.OC.Core.LinqHelper.DistinctBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            去重复项
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="source"></param>
+            <param name="keySelector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.LinqHelper.GetDefaultPredicate``1(System.Linq.IQueryable{``0},System.Boolean)">
+            <summary>
+            构建初始查询条件
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="defultPredicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.LinqHelper.GetOrderBy``1(System.Linq.IQueryable{``0},System.Func{System.Linq.IQueryable{``0},System.Linq.IOrderedQueryable{``0}})">
+            <summary>
+            获取默认排序
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="orderBy"></param>
+            <returns></returns>
+            <example>var ord=GetDefaultOrder(d=>d.OrderBy(o=>o.Id))</example>
+        </member>
+        <member name="T:HiShop.OC.Core.PredicateExtensions">
+            <summary>
+            条件组合扩展
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.PredicateExtensions.True``1">
+            <summary>
+            初始True
+            <para>主针对And拼接</para>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.PredicateExtensions.False``1">
+            <summary>
+            初始False
+            <para>主针对Or拼接</para>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.PredicateExtensions.Compose``1(System.Linq.Expressions.Expression{``0},System.Linq.Expressions.Expression{``0},System.Func{System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression})">
+            <summary>
+            条件构建
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <param name="merge"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.PredicateExtensions.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            And拼接
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.PredicateExtensions.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Or拼接
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HiShop.OC.Core.ParameterRebinder">
+            <summary>
+            条件重组
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.Core.NetworkHelper">
+            <summary>
+            网络帮助类
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.NetworkHelper.GetAddressIP">
+            <summary>
+            获取本地IP地址信息
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.NetworkHelper.IsInnerIp">
+            <summary>
+            是否为内网
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.NetworkHelper.GetIpNum(System.String)">
+            <summary>
+            把IP地址转换为Long型数字
+            </summary>
+            <param name="ipAddress">IP地址字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.NetworkHelper.IsInner(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            判断用户IP地址转换为Long型后是否在内网IP地址所在范围
+            </summary>
+            <param name="userIp"></param>
+            <param name="begin"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HiShop.OC.Core.SecureHelper">
+            <summary>
+            安装帮助类
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.AESEncrypt(System.String,System.String)">
+            <summary>
+            AES加密
+            </summary>
+            <param name="encryptStr">加密字符串</param>
+            <param name="encryptKey">密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.AESDecrypt(System.String,System.String)">
+            <summary>
+            AES解密
+            </summary>
+            <param name="decryptStr">解密字符串</param>
+            <param name="decryptKey">密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.MD5(System.String)">
+            <summary>
+            MD5散列
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.IsBase64String(System.String)">
+            <summary>
+            判断是否是Base64字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.IsSafeSqlString(System.String)">
+            <summary>
+            判断当前字符串是否存在SQL注入
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.EncodeBase64(System.Text.Encoding,System.String)">
+            <summary> 
+            Base64加密 
+            </summary> 
+            <param name="codeName">加密采用的编码方式</param> 
+            <param name="source">待加密的明文</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.EncodeBase64(System.String)">
+            <summary> 
+            Base64加密，采用utf8编码方式加密 
+            </summary> 
+            <param name="source">待加密的明文</param> 
+            <returns>加密后的字符串</returns> 
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.DecodeBase64(System.Text.Encoding,System.String)">
+            <summary> 
+            Base64解密 
+            </summary> 
+            <param name="codeName">解密采用的编码方式，注意和加密时采用的方式一致</param> 
+            <param name="result">待解密的密文</param> 
+            <returns>解密后的字符串</returns> 
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.DecodeBase64(System.String)">
+            <summary> 
+            Base64解密，采用utf8编码方式解密 
+            </summary> 
+            <param name="result">待解密的密文</param> 
+            <returns>解密后的字符串</returns> 
+        </member>
+        <member name="M:HiShop.OC.Core.SecureHelper.GetPasswrodWithTwiceEncode(System.String,System.String)">
+            <summary>
+            密码加密方法
+            </summary>
+            <param name="password"></param>
+            <param name="salt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HiShop.OC.Core.StringHelper">
+            <summary>
+            字符串帮助类
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.GetStringLength(System.String)">
+            <summary>
+            获得字符串的长度,一个汉字的长度为1
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.SplitString(System.String,System.String)">
+            <summary>
+            分割字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="splitStr">分隔字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.SplitString(System.String)">
+            <summary>
+            分割字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.SubString(System.String,System.Int32,System.Int32)">
+            <summary>
+            截取字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="startIndex">开始位置的索引</param>
+            <param name="length">子字符串的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.SubString(System.String,System.Int32)">
+            <summary>
+            截取字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="length">子字符串的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.TrimStart(System.String,System.String)">
+            <summary>
+            移除前导字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="trimStr">移除字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.TrimStart(System.String,System.String,System.Boolean)">
+            <summary>
+            移除前导字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="trimStr">移除字符串</param>
+            <param name="ignoreCase">是否忽略大小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.TrimEnd(System.String,System.String)">
+            <summary>
+            移除后导字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="trimStr">移除字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.TrimEnd(System.String,System.String,System.Boolean)">
+            <summary>
+            移除后导字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="trimStr">移除字符串</param>
+            <param name="ignoreCase">是否忽略大小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.Trim(System.String,System.String)">
+            <summary>
+            移除前导和后导字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="trimStr">移除字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.Trim(System.String,System.String,System.Boolean)">
+            <summary>
+            移除前导和后导字符串
+            </summary>
+            <param name="sourceStr">源字符串</param>
+            <param name="trimStr">移除字符串</param>
+            <param name="ignoreCase">是否忽略大小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.IndexOf(System.String,System.Int32)">
+            <summary>
+            获得指定顺序的字符在字符串中的位置索引
+            </summary>
+            <param name="s">字符串</param>
+            <param name="order">顺序</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.StringHelper.IndexOf(System.String,System.Char,System.Int32)">
+            <summary>
+            获得指定顺序的字符在字符串中的位置索引
+            </summary>
+            <param name="s">字符串</param>
+            <param name="c">字符</param>
+            <param name="order">顺序</param>
+            <returns></returns>
+        </member>
+        <member name="T:HiShop.OC.Core.TypeHelper">
+            <summary>
+            类型帮助类
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.StringToInt(System.String,System.Int32)">
+            <summary>
+            将string类型转换成int类型
+            </summary>
+            <param name="s">目标字符串</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.StringToInt(System.String)">
+            <summary>
+            将string类型转换成int类型
+            </summary>
+            <param name="s">目标字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ObjectToInt(System.Object,System.Int32)">
+            <summary>
+            将object类型转换成int类型
+            </summary>
+            <param name="s">目标对象</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ObjectToInt(System.Object)">
+            <summary>
+            将object类型转换成int类型
+            </summary>
+            <param name="s">目标对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.StringToBool(System.String,System.Boolean)">
+            <summary>
+            将string类型转换成bool类型
+            </summary>
+            <param name="s">目标字符串</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ToBool(System.String)">
+            <summary>
+            将string类型转换成bool类型
+            </summary>
+            <param name="s">目标字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ObjectToBool(System.Object,System.Boolean)">
+            <summary>
+            将object类型转换成bool类型
+            </summary>
+            <param name="s">目标对象</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ObjectToBool(System.Object)">
+            <summary>
+            将object类型转换成bool类型
+            </summary>
+            <param name="s">目标对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.StringToDateTime(System.String,System.DateTime)">
+            <summary>
+            将string类型转换成datetime类型
+            </summary>
+            <param name="s">目标字符串</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.StringToDateTime(System.String)">
+            <summary>
+            将string类型转换成datetime类型
+            </summary>
+            <param name="s">目标字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ObjectToDateTime(System.Object,System.DateTime)">
+            <summary>
+            将object类型转换成datetime类型
+            </summary>
+            <param name="s">目标对象</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ObjectToDateTime(System.Object)">
+            <summary>
+            将object类型转换成datetime类型
+            </summary>
+            <param name="s">目标对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.StringToDecimal(System.String,System.Decimal)">
+            <summary>
+            将string类型转换成decimal类型
+            </summary>
+            <param name="s">目标字符串</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.StringToDecimal(System.String)">
+            <summary>
+            将string类型转换成decimal类型
+            </summary>
+            <param name="s">目标字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ObjectToDecimal(System.Object,System.Decimal)">
+            <summary>
+            将object类型转换成decimal类型
+            </summary>
+            <param name="s">目标对象</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.TypeHelper.ObjectToDecimal(System.Object)">
+            <summary>
+            将object类型转换成decimal类型
+            </summary>
+            <param name="s">目标对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:HiShop.OC.Core.ValidateHelper">
+            <summary>
+            验证帮助类
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsEmail(System.String)">
+            <summary>
+            是否为邮箱名
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsMobile(System.String)">
+            <summary>
+            是否为手机号
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsPhone(System.String)">
+            <summary>
+            是否为固话号
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsIP(System.String)">
+            <summary>
+            是否为IP
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsIdCard(System.String)">
+            <summary>
+            是否是身份证号
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.CheckIDCard18(System.String)">
+            <summary>
+            是否为18位身份证号
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.CheckIDCard15(System.String)">
+            <summary>
+            是否为15位身份证号
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsDate(System.String)">
+            <summary>
+            是否为日期
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsNumeric(System.String)">
+            <summary>
+            是否是数值(包括整数和小数)
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsZipCode(System.String)">
+            <summary>
+            是否为邮政编码
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsImgFileName(System.String)">
+            <summary>
+            是否是图片文件名
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.InIP(System.String,System.String)">
+            <summary>
+            判断一个ip是否在另一个ip内
+            </summary>
+            <param name="sourceIP">检测ip</param>
+            <param name="targetIP">匹配ip</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.InIPList(System.String,System.String[])">
+            <summary>
+            判断一个ip是否在另一个ip内
+            </summary>
+            <param name="sourceIP">检测ip</param>
+            <param name="targetIPList">匹配ip列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.InIPList(System.String,System.String)">
+            <summary>
+            判断一个ip是否在另一个ip内
+            </summary>
+            <param name="sourceIP">检测ip</param>
+            <param name="targetIPStr">匹配ip</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.BetweenPeriod(System.String[],System.String@)">
+            <summary>
+            判断当前时间是否在指定的时间段内
+            </summary>
+            <param name="periodList">指定时间段</param>
+            <param name="liePeriod">所处时间段</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.BetweenPeriod(System.String,System.String@)">
+            <summary>
+            判断当前时间是否在指定的时间段内
+            </summary>
+            <param name="periodStr">指定时间段</param>
+            <param name="liePeriod">所处时间段</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.BetweenPeriod(System.String)">
+            <summary>
+            判断当前时间是否在指定的时间段内
+            </summary>
+            <param name="periodList">指定时间段</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsNumericArray(System.String[])">
+            <summary>
+            是否是数值(包括整数和小数)
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsNumericRule(System.String,System.String)">
+            <summary>
+            是否是数值(包括整数和小数)
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.ValidateHelper.IsNumericRule(System.String)">
+            <summary>
+            是否是数值(包括整数和小数)
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.Core.WebHelper">
+            <summary>
+            Web帮助类
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.HtmlDecode(System.String)">
+            <summary>
+            HTML解码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.HtmlEncode(System.String)">
+            <summary>
+            HTML编码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.UrlDecode(System.String)">
+            <summary>
+            URL解码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.UrlEncode(System.String)">
+            <summary>
+            URL编码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.DeleteCookie(System.String)">
+            <summary>
+            删除指定名称的Cookie
+            </summary>
+            <param name="name">Cookie名称</param>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetCookie(System.String)">
+            <summary>
+            获得指定名称的Cookie值
+            </summary>
+            <param name="name">Cookie名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetCookie(System.String,System.String)">
+            <summary>
+            获得指定名称的Cookie中特定键的值
+            </summary>
+            <param name="name">Cookie名称</param>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.SetCookie(System.String,System.String)">
+            <summary>
+            设置指定名称的Cookie的值
+            </summary>
+            <param name="name">Cookie名称</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.SetCookie(System.String,System.String,System.DateTime)">
+            <summary>
+            设置指定名称的Cookie的值
+            </summary>
+            <param name="name">Cookie名称</param>
+            <param name="value">值</param>
+            <param name="expires">过期时间</param>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.SetCookie(System.String,System.String,System.String)">
+            <summary>
+            设置指定名称的Cookie特定键的值
+            </summary>
+            <param name="name">Cookie名称</param>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.SetCookie(System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            设置指定名称的Cookie特定键的值
+            </summary>
+            <param name="name">Cookie名称</param>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="expires">过期时间</param>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.IsGet">
+            <summary>
+            是否是get请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.IsPost">
+            <summary>
+            是否是post请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.IsAjax">
+            <summary>
+            是否是Ajax请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetQueryString(System.String,System.String)">
+            <summary>
+            获得查询字符串中的值
+            </summary>
+            <param name="key">键</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetQueryString(System.String)">
+            <summary>
+            获得查询字符串中的值
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetQueryInt(System.String,System.Int32)">
+            <summary>
+            获得查询字符串中的值
+            </summary>
+            <param name="key">键</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetQueryInt(System.String)">
+            <summary>
+            获得查询字符串中的值
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetFormString(System.String,System.String)">
+            <summary>
+            获得表单中的值
+            </summary>
+            <param name="key">键</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetFormString(System.String)">
+            <summary>
+            获得表单中的值
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetFormInt(System.String,System.Int32)">
+            <summary>
+            获得表单中的值
+            </summary>
+            <param name="key">键</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetFormInt(System.String)">
+            <summary>
+            获得表单中的值
+            </summary>
+            <param name="key">键</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetUrlReferrer">
+            <summary>
+            获得上次请求的url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetHost">
+            <summary>
+            获得请求的主机部分
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetPort">
+            <summary>
+            获取请求的端口号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetUrl">
+            <summary>
+            获得请求的url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetRawUrl">
+            <summary>
+            获得请求的原始url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetIP">
+            <summary>
+            获得请求的ip
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetBrowserType">
+            <summary>
+            获得请求的浏览器类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetBrowserName">
+            <summary>
+            获得请求的浏览器名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetBrowserVersion">
+            <summary>
+            获得请求的浏览器版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetOSType">
+            <summary>
+            获得请求客户端的操作系统类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetOSName">
+            <summary>
+            获得请求客户端的操作系统名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.IsBrowser">
+            <summary>
+            判断是否是浏览器请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.IsMobile">
+            <summary>
+            是否是移动设备请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.IsCrawler">
+            <summary>
+            判断是否是搜索引擎爬虫请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetParmList(System.String)">
+            <summary>
+            获得参数列表
+            </summary>
+            <param name="data">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetRequestData(System.String,System.String)">
+            <summary>
+            获得http请求数据
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="postData">发送数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetRequestData(System.String,System.String,System.String)">
+            <summary>
+            获得http请求数据
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="method">请求方式</param>
+            <param name="postData">发送数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetRequestData(System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            获得http请求数据
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="method">请求方式</param>
+            <param name="postData">发送数据</param>
+            <param name="encoding">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetRequestData(System.String,System.String,System.String,System.Text.Encoding,System.Int32)">
+            <summary>
+            获得http请求数据
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="method">请求方式</param>
+            <param name="postData">发送数据</param>
+            <param name="encoding">编码</param>
+            <param name="timeout">超时值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetURLResponse(System.String,System.String,System.String,System.Text.Encoding,System.Int32)">
+            <summary>
+            获得http请求数据
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="method">请求方式</param>
+            <param name="postData">发送数据</param>
+            <param name="encoding">编码</param>
+            <param name="timeout">超时值</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.WebHelper.GetTrustLevel">
+            <summary>
+            获得当前应用程序的信任级别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.XmlHelper.SerializeToXml(System.Object,System.String)">
+            <summary>
+            XML序列化
+            </summary>
+            <param name="obj">序列对象</param>
+            <param name="filePath">XML文件路径</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:HiShop.OC.Core.XmlHelper.DeserializeFromXML(System.Type,System.String)">
+            <summary>
+            XML反序列化
+            </summary>
+            <param name="type">目标类型(Type类型)</param>
+            <param name="filePath">XML文件路径</param>
+            <returns>序列对象</returns>
+        </member>
+        <member name="P:HiShop.OC.Core.Item.Interface">
+            <summary>
+            接口
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Item.Implements">
+            <summary>
+            实现
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.LogContent.Source">
+            <summary>
+            错误来源
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.LocalLog.LogFileName(HiShop.OC.Core.Level)">
+            <summary>
+            根据日期时间 创建目录，获得日志文件全路径
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.LocalLog.Logs(HiShop.OC.Core.LogContent)">
+            <summary>
+            记录日志
+            </summary>
+            <param name="content"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.LocalLog.LogEx(System.String,System.Exception)">
+            <summary>
+            异常记录
+            </summary>
+            <param name="message"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:HiShop.OC.Core.Log">
+            <summary>
+            记录日志
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.Log.Error(System.Object)">
+            <summary>
+            一般错误
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Log.Error(System.Object,System.Exception)">
+            <summary>
+            一般错误
+            </summary>
+            <param name="message">消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Log.Info(System.Object)">
+            <summary>
+            信息
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Log.Info(System.Object,System.Exception)">
+            <summary>
+            信息
+            </summary>
+            <param name="message">消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Log.Warn(System.Object)">
+            <summary>
+            警告
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Log.Warn(System.Object,System.Exception)">
+            <summary>
+            警告
+            </summary>
+            <param name="message">消息</param>
+            <param name="exception">异常</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Log.Debug(System.Object)">
+            <summary>
+            调试
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Log.Debug(System.Object,System.Exception)">
+            <summary>
+            调试
+            </summary>
+            <param name="message">消息</param>
+            <param name="ex">异常</param>
+        </member>
+        <member name="T:HiShop.OC.Core.OSSLog">
+            <summary>
+            OSS记录日志信息
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.FormData.FormItem.Name">
+            <summary>
+            表单项名称(对应name属性)
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.FormData.FormItem.DisplayName">
+            <summary>
+            表单项显示名称
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.FormData.FormItem.IsRequired">
+            <summary>
+            是否为必填项
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.FormData.FormItem.Type">
+            <summary>
+            表单项类型
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.FormData.FormItem.Value">
+            <summary>
+            表单项的值
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.Core.Plugins.FormData.FormItemType">
+            <summary>
+            表单项类型
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.FormData.FormItemType.text">
+            <summary>
+            对应input中type="text"
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.IPlugin.WorkDirectory">
+            <summary>
+            插件工作目录
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.IPlugin.CheckCanEnable">
+            <summary>
+            检查是否可以开启插件
+            </summary>
+            <returns></returns>
+            <exception cref="T:HiShop.OC.Core.PluginConfigException"></exception>
+        </member>
+        <member name="T:HiShop.OC.Core.Plugins.Plugin`1">
+            <summary>
+            插件
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.Plugin`1.Biz">
+            <summary>
+            相关业务
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.Core.Plugins.PluginBase">
+            <summary>
+            插件实例基类
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginBase.PluginInfo">
+            <summary>
+            插件信息
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.PluginId">
+            <summary>
+            插件标识
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.DisplayName">
+            <summary>
+            插件显示名称
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.ClassFullName">
+            <summary>
+            程序集类全名
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.Description">
+            <summary>
+            插件描述
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.PluginDirectory">
+            <summary>
+            插件所在目录
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.Type">
+            <summary>
+            插件类型(0-开放登录插件,1-支付插件,2-配送插件，3-消息插件，4-微信支付插件，5-短信插件，6-邮件插件)
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.PluginTypes">
+            <summary>
+            插件类型
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.Enable">
+            <summary>
+            是否开启
+            </summary>
+        </member>
+        <member name="P:HiShop.OC.Core.Plugins.PluginInfo.DisplayIndex">
+            <summary>
+            插件显示顺序
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.Core.Plugins.PluginsManagement">
+            <summary>
+            插件
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginsManagement.IntalledPlugins">
+            <summary>
+            已安装插件
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginsManagement.registed">
+            <summary>
+            标记是否已经在创建时加载，插件已注册
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginsManagement.strategiesRegisted">
+            <summary>
+            标记是否已经在创建时加载，策略已注册
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.GetInstalledPluginInfos(HiShop.OC.Core.Plugins.PluginType)">
+            <summary>
+            获取已安装的插件信息
+            </summary>
+            <param name="pluginType">插件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.GetPluginInfo(System.String)">
+            <summary>
+            获取指定的插件信息
+            </summary>
+            <param name="pluginId">插件标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.GetInstalledPlugins``1(HiShop.OC.Core.Plugins.PluginType)">
+            <summary>
+            获取已安装的插件
+            </summary>
+            <param name="pluginType">插件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.GetInstalledPlugin``1(System.String)">
+            <summary>
+            获取已安装的插件
+            </summary>
+            <param name="pluginType">插件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.RegistAtStartStrategies">
+            <summary>
+            加载策略所有dll
+            </summary>
+            <param name="pluginsDirectory"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.RegistAtStart">
+            <summary>
+            加载指定目录下所有dll
+            </summary>
+            <param name="pluginsDirectory"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.EnablePlugin_Private(System.String,System.Boolean)">
+            <summary>
+            开启插件
+            </summary>
+            <param name="pluginId">插件标识</param>
+            <param name="enable">是否开启</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.InstallPlugin(System.String)">
+            <summary>
+            安装插件
+            </summary>
+            <param name="pluginFullDirectory"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.UnInstallPlugin(System.String)">
+            <summary>
+            卸载插件
+            </summary>
+            <param name="classFullName"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.GetPlugins``1">
+            <summary>
+            获取指定类型所有插件
+            </summary>
+            <typeparam name="T">插件类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.GetPlugin``1(System.String)">
+            <summary>
+            获取指定id的插件
+            </summary>
+            <typeparam name="T">插件类型</typeparam>
+            <param name="pluginId">插件Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.EnablePlugin(System.String,System.Boolean)">
+            <summary>
+            开启插件
+            </summary>
+            <param name="pluginId">插件Id</param>
+            <param name="enable">是否开启</param>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.InstallDll(System.String)">
+            <summary>
+            加载(安装)dll 
+            </summary>
+            <param name="dllFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.AddPluginInfo(System.IO.FileInfo)">
+            <summary>
+            添加插件信息
+            </summary>
+            <param name="dllFile"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.UpdatePluginList(HiShop.OC.Core.Plugins.PluginInfo)">
+            <summary>
+            更新插件列表
+            </summary>
+            <param name="plugin"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.GetPluginFiles(System.String)">
+            <summary>
+            获取插件程序集文件
+            </summary>
+            <param name="pluginDirectory">插件所在目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:HiShop.OC.Core.Plugins.PluginsManagement.DeepClone(HiShop.OC.Core.Plugins.PluginInfo)">
+            <summary>
+            深复制IPlugin
+            </summary>
+            <param name="plugin"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HiShop.OC.Core.Plugins.PluginType">
+            <summary>
+            插件类型
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginType.OauthPlugin">
+            <summary>
+            开放登录插件
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginType.PayPlugin">
+            <summary>
+            支付插件
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginType.Express">
+            <summary>
+            快递插件
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginType.Message">
+            <summary>
+            消息插件
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginType.SMS">
+            <summary>
+            手机短信插件
+            </summary>
+        </member>
+        <member name="F:HiShop.OC.Core.Plugins.PluginType.Email">
+            <summary>
+            邮件插件
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.Core.PreStartUp">
+            <summary>
+            自启动类标签
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.PreStartUp.#ctor(System.Type,System.String)">
+            <summary>
+            自启动方法
+            </summary>
+            <param name="type">类类型</param>
+            <param name="method">静态无参方法(默认执行顺序10)</param>
+        </member>
+        <member name="M:HiShop.OC.Core.PreStartUp.#ctor(System.Type,System.String,System.Int32)">
+            <summary>
+            自启动方法
+            </summary>
+            <param name="type">类类型</param>
+            <param name="method">静态无参方法</param>
+            <param name="order">值越大越先启动(默认10)</param>
+        </member>
+        <member name="T:HiShop.OC.Core.SerializableDictionary`2">
+            <summary>
+            标题：支持 XML 序列化的 Dictionary
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:HiShop.OC.Core.SerializableDictionary`2.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            从对象的 XML 表示形式生成该对象
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:HiShop.OC.Core.SerializableDictionary`2.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            将对象转换为其 XML 表示形式
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:HiShop.OC.Core.IStrategy">
+            <summary>
+            策略接口
+            </summary>
+        </member>
+        <member name="T:HiShop.OC.Core.StrategyFactory">
+            <summary>
+            策略工厂：负责根据配置实现对应的实例
+            </summary>
+        </member>
+        <member name="M:HiShop.OC.Core.StrategyFactory.GetStrategyFromConfig``1">
+            <summary>
+            根据配置返回具体的实现
+            </summary>
+            <typeparam name="T">接口类型</typeparam>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
